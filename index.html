@@ -7,30 +7,33 @@
     <!-- Link to Google Fonts for Fredoka One -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <style>
-        /* Body */
+        /* Global Styles */
         body {
-            font-family: 'Fredoka One', sans-serif; /* Applying Fredoka One font */
+            font-family: 'Fredoka One', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f7f6; /* Light, neutral background */
+            background-color: #f4f7f6;
             color: #333;
+            line-height: 1.6;
         }
 
-        /* Header */
+        /* Header Styles */
         header {
-            background-color: #2D3E50; /* Dark blue */
+            background: linear-gradient(135deg, #2D3E50, #1abc9c); /* Gradient background */
             color: white;
-            padding: 30px;
+            padding: 40px;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         header h1 {
             margin: 0;
-            font-size: 2.8em;
+            font-size: 3em;
+            letter-spacing: 2px;
         }
 
         /* Navigation Bar */
         nav {
-            background-color: #34495e; /* Darker blue */
+            background-color: #34495e;
             overflow: hidden;
         }
         nav a {
@@ -41,37 +44,77 @@
             padding: 16px 20px;
             text-decoration: none;
             font-size: 1.1em;
+            transition: background-color 0.3s, color 0.3s;
         }
         nav a:hover {
             background-color: #1abc9c; /* Soft teal hover effect */
             color: white;
         }
-        
-        /* Content Section */
+
+        /* Section Styles */
         section {
-            padding: 30px;
-            margin: 30px;
+            padding: 40px;
+            margin: 40px auto;
             background-color: white;
+            max-width: 1200px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        section:hover {
+            transform: scale(1.02); /* Slight zoom effect on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
         section h2 {
-            color: #2D3E50; /* Dark blue text for headings */
+            color: #2D3E50;
+            font-size: 2em;
+            margin-bottom: 20px;
         }
         section p {
             font-size: 1.2em;
-            line-height: 1.6;
         }
 
-        /* Footer */
+        /* Footer Styles */
         footer {
-            background-color: #2D3E50; /* Dark blue */
+            background: linear-gradient(135deg, #2D3E50, #1abc9c); /* Same gradient as header */
             color: white;
             text-align: center;
             padding: 12px;
             position: fixed;
             bottom: 0;
             width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Button Styling */
+        .btn {
+            background-color: #1abc9c;
+            color: white;
+            padding: 14px 24px;
+            font-size: 1.1em;
+            text-align: center;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .btn:hover {
+            background-color: #2D3E50;
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+            nav a {
+                font-size: 1em;
+                padding: 12px 16px;
+            }
+            section {
+                padding: 30px;
+                margin: 20px;
+            }
         }
     </style>
 </head>
@@ -93,6 +136,7 @@
     <h2>Welcome to Best Friends Pet Services</h2>
     <p>We offer professional dog walking and pet sitting services to give your pets the care they deserve while you're away. Our team is dedicated to providing a safe, fun, and loving environment for your furry friends.</p>
     <p>Contact us today to schedule a walk or a sitting session!</p>
+    <a href="contact.html" class="btn">Contact Us</a> <!-- Call to action button -->
 </section>
 
 <footer>
